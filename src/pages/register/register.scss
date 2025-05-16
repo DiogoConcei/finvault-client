@@ -1,0 +1,87 @@
+@use "../../styles/variables.scss" as *;
+
+.sectionRegister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: $blackOlive;
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: $space-5;
+    min-width: 500px;
+    min-height: 500px;
+    border: 1px solid $royalPurple;
+    border-radius: $radius;
+    background: darken($blackOlive, 5%);
+
+    input {
+      padding: $space-2;
+      border-radius: $radius;
+      background-color: $blackOlive;
+      font-size: $font-xl;
+      border: 1px solid $royalPurple;
+      padding: $space-4;
+      color: $white;
+      width: 75%;
+      display: flex;
+
+      &::placeholder {
+        color: $white;
+        font-size: $font-xl;
+      }
+
+      &:focus {
+        outline: 1px solid $brightPink;
+      }
+    }
+
+    .error {
+      color: $brightPink;
+      font-size: $font-sm;
+      margin-top: -$space-3;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 80%;
+
+      button {
+        width: 150px;
+        border: 1px solid $royalPurple;
+        background: $blackOlive;
+        color: $white;
+        padding: $space-3;
+        border-radius: $radius;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid $brightPink;
+        }
+      }
+
+      .link {
+        width: 150px;
+        background: transparent;
+        border: 1px solid $royalPurple;
+        color: $white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: $space-3;
+        border-radius: $radius;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+          border: 1px solid $brightPink;
+        }
+      }
+    }
+  }
+}
